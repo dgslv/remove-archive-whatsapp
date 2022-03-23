@@ -1,0 +1,13 @@
+{
+    "name": "Remove archive whatsapp",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": [
+          "https://web.whatsapp.com/"
+        ],
+        "js": ["content.js"]
+      }
+    ]
+  }
