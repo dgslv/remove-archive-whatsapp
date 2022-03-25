@@ -18,8 +18,18 @@ function waitForElm(selector) {
     });
 }
 
-waitForElm('._1lPgH').then((elm) => {
-    my_xpath='/html/body/div[1]/div[1]/div[1]/div[3]/div/div[2]/button'
-    let element = document.evaluate(my_xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null)
-    element.singleNodeValue.remove()
+const archivedClass = "._2nY6U._1frFQ";
+
+waitForElm(archivedClass).then(async(elm) => {
+    try {
+        elm.remove()
+
+        while (true) {
+            const element = await waitForElm(archivedClass)
+            element.remove()
+        }
+    }
+    catch(error) {
+        console.log('Erro ao tentar remover elemento', error)   
+    }
 });
