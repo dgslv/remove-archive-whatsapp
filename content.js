@@ -18,7 +18,7 @@ function waitForElm(selector) {
     });
 }
 
-const archivedClass = "._2nY6U._1frFQ";
+const archivedClass = ".x2lah0s";
 
 waitForElm(archivedClass).then(async(elm) => {
     try {
